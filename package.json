@@ -1,0 +1,16 @@
+{
+  "name": "site-parser",
+  "version": "1.0.0",
+  "type":"module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "csv-stringify": "^6.5.0",
+    "jsdom": "^24.1.0"
+  }
+}

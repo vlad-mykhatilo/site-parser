@@ -24,9 +24,9 @@ const parser = new Parser();
  *
  * @param {string} url - The URL of the blog page to parse. If not provided, the value of process.env.INITIAL_PAGE will be used.
  */
-async function parseBlogPage(url = '') {
+async function parsePage(url = '') {
     //just show proccess
-    console.log('blog page', url || process.env.INITIAL_PAGE);
+    console.log('archive page', url || process.env.INITIAL_PAGE);
 
     const html = await parser.fetchURL(url);
 
@@ -45,10 +45,11 @@ async function parseBlogPage(url = '') {
 
     if (nextPage) {
         const url = nextPage.href;
-        return parseBlogPage(url);
+        return parsePage(url);
     } else {
         parser.writeData(rows, COLUMNS);
+        console.log('done');
     }
 }
 
-parseBlogPage();
+parsePage();

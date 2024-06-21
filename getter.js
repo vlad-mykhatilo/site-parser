@@ -24,10 +24,9 @@ export default class Getter {
         });
 
         const contentData = this.getContent();
-        this.row.push(contentData.content);
-        this.row.push(contentData.exerpt);
-        this.row.push(contentData.minutes);
-        this.row.push( slug );
+        this.row = [ ...this.row, ...contentData ];
+
+        this.row.push(slug);
     }
 
     getRow() {
@@ -53,11 +52,11 @@ export default class Getter {
         const words = content.textContent.split(' ').length;
         const minutes = Math.ceil(words / this.WPM);
 
-        return {
-            content: content.innerHTML,
+        return [
+            content.innerHTML,
             exerpt,
             minutes,
-        };
+        ];
     }
 
     /**

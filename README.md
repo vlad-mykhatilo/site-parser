@@ -5,15 +5,15 @@ It generates a CSV file, that you can use with any plugins for import into Wordp
 
 ## index.js
 
-1. In COLUMNS you have to set up a list of heading for columns in CSV file.
-2. POST_SELECTOR - set the selector for <a> of single post on archive page. The parser can get a URL to single page of post and fetch data from.
+1. In COLUMNS you have to set up a list of headings for columns in CSV file.
+2. POST_SELECTOR - set the selector for `<a>` of single post on archive page. The parser can get a URL to single page of post and fetch data from.
 3. NEXT_PAGE - set the selector for next page link. The parser can go to next page recursively.
-4. You can set the initial page diretly to parsePage() or as .env variable.
+4. You can set the initial page diretly to `parsePage()` at the end of file or as .env variable.
 
 ## getter.js
 
 1. SELECTORS - you can set here a list of selectors of elements, from which we only need their textual content.
-2. POST_CONTENT_SELECTOR - here should be a selector for wrapper of general post content. It is used in getContent() to get HTML of general content. In my case I also needed the exerpt and minutes ( reading time ). But you can edit this method for you case, what you need get else form general content.
+2. POST_CONTENT_SELECTOR - here should be a selector for wrapper of general post content. It is used in `getContent()` to get HTML of general content. In my case I also needed the exerpt and minutes ( reading time ). But you can edit this method for your case, what you need get else form general content.
 3. WPM - is used to calculate the reading time.
 
 ## parser.js

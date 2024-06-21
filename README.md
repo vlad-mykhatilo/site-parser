@@ -20,7 +20,14 @@ It generates a CSV file, that you can use with any plugins for import into Wordp
 You don't have to do anything here. Everything should work fine. But if you need to customize a little bit, you can do that.
 
 ## how to run
+First you need to install all modules
+
+```sh
+npm install
+```
+
 To start parsing you need to run command in terminal 
+
 ```sh
 node index.js
 ```
